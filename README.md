@@ -1,7 +1,7 @@
 # vue-qart
 
 the Vue 2.x directive for [kciter's qart.js](https://github.com/kciter/qart.js)
-
+![](https://github.com/superman66/vue-qart/blob/master/examples/assets/qrcdoe.png)
 ## Installation
 **install with NPM**
 ```
