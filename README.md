@@ -33,14 +33,8 @@ data () {
     }
 }
 ```
-**Options**
-|Field|Type|Description|Default|
-|-----|----|-----------|-------|
-|value|String|The data of the QR code.|*Required*|
-|imagePath|String|The path of the combined image.|*Required*|
-|filter|String|Define an image filter. `threshold` or `color`|threshold|
 
-[the more usage of qart.js](https://github.com/kciter/qart.js) 
+For more details you should definitely check out[qart.js](https://github.com/kciter/qart.js) 
 
 ## Build Setup
 ``` bash
