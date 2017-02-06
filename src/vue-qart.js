@@ -6,9 +6,7 @@ import QArt from 'qartjs';
 
 export default {
     inserted: function(el, binding){
-        console.log(binding.value);
         const config = binding.value;
-
         new QArt({
             value: config.value,
             imagePath: config.imagePath,

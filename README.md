@@ -3,6 +3,8 @@
 the Vue 2.x directive for [kciter's qart.js](https://github.com/kciter/qart.js)
 <br>
 <img src="examples/assets/qrcode.png"/>
+
+Check the [DEMO](http://www.iamsuperman.cn/vue-qart/)
 ## Installation
 **install with NPM**
 ```
