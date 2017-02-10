@@ -9,7 +9,8 @@
   },
   "dependencies": {
     "qartjs": "^1.0.2",
-    "vue": "^2.1.0"
+    "vue": "^2.1.0",
+    "webpack-merge": "^2.6.1"
   },
   "devDependencies": {
     "babel-core": "^6.0.0",
