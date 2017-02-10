@@ -15,7 +15,7 @@
         name: 'app',
         data () {
             return {
-                msg: 'Vue 2.x directive of QArt.js',
+                msg: 'the Vue 2.x directive for QArt.js',
                 config: {
                     value: 'https://www.baidu.com',
                     imagePath: './assets/logo.png',
