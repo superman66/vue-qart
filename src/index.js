@@ -1,9 +1,16 @@
 /**
  * Created by superman on 17/2/6.
  */
-import Vue from 'vue'
 import VueQArt from './vue-qart';
 
-Vue.directive('VueQArt', VueQArt);
+const install = function (Vue) {
+  Vue.directive('VueQArt', VueQArt);
+};
 
+if(window.Vue){
+  window.VueQArt = VueQArt;
+  Vue.use(install);
+}
+
+VueQArt.install = install;
 export default VueQArt;

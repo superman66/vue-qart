@@ -12,7 +12,7 @@ npm install vue-qart --save
 ```
 **Import**
 ```$xslt
-import VueQArt from 'VueQArt'
+import VueQArt from 'vue-qart'
 
 new Vue({
     directives: {VueQArt}

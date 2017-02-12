@@ -3,6 +3,9 @@ var webpack = require('webpack')
 var merge = require('webpack-merge')
 
 var base = {
+  // resolveLoader: {
+  //   root: path.join(__dirname, 'node_modules'),
+  // },
   module: {
     rules: [
       {
@@ -10,13 +13,9 @@ var base = {
         loader: 'vue-loader',
         options: {
           loaders: {
-            // Since sass-loader (weirdly) has SCSS as its default parse mode, we map
-            // the "scss" and "sass" values for the lang attribute to the right configs here.
-            // other preprocessors should work out of the box, no loader config like this necessary.
             'scss': 'vue-style-loader!css-loader!sass-loader',
             'sass': 'vue-style-loader!css-loader!sass-loader?indentedSyntax'
           }
-          // other vue-loader options go here
         }
       },
       {
@@ -46,8 +45,7 @@ var base = {
     hints: false
   },
   devtool: '#eval-source-map'
-}
-
+};
 
 if (process.env.NODE_ENV === 'production') {
   module.exports.devtool = '#source-map'
@@ -70,7 +68,6 @@ if (process.env.NODE_ENV === 'production') {
   ])
 }
 
-
 var demo = merge(base, {
   entry: './demo/main.js',
   output: {
@@ -80,5 +77,18 @@ var demo = merge(base, {
   }
 });
 
+var build = merge(base, {
+  entry: './src/index.js',
+  output: {
+    path: path.resolve(__dirname, './dist'),
+    publicPath: '/dist/',
+    filename: 'vue-qart.js',
+    library: 'VueQArt',
+    libraryTarget: 'umd'
+  }
+});
 
-module.exports = demo;
+module.exports = [demo, build];
+
+
+

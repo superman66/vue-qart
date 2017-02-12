@@ -7,7 +7,7 @@
 </template>
 
 <script>
-    import VueQArt from '../src/vue-qart'
+    import VueQArt from '../dist/vue-qart'
     export default {
         directives: {
             VueQArt

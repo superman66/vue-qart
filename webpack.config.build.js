@@ -1,8 +1,17 @@
 var path = require('path')
 var webpack = require('webpack')
-var merge = require('webpack-merge')
 
-var base = {
+
+
+module.exports = {
+  entry: './src/index.js',
+  output: {
+    path: path.resolve(__dirname, './dist'),
+    publicPath: '/dist/',
+    filename: 'vue-qart.js',
+    library: 'VueQArt',
+    libraryTarget: 'umd'
+  },
   module: {
     rules: [
       {
@@ -48,7 +57,6 @@ var base = {
   devtool: '#eval-source-map'
 }
 
-
 if (process.env.NODE_ENV === 'production') {
   module.exports.devtool = '#source-map'
   // http://vue-loader.vuejs.org/en/workflow/production.html
@@ -69,16 +77,3 @@ if (process.env.NODE_ENV === 'production') {
     })
   ])
 }
-
-
-var demo = merge(base, {
-  entry: './demo/main.js',
-  output: {
-    path: path.resolve(__dirname, './demo'),
-    publicPath: '/demo/',
-    filename: 'bundle.js'
-  }
-});
-
-
-module.exports = demo;
