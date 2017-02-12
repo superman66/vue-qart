@@ -47,6 +47,6 @@ npm install
 # serve with hot reload at localhost:8080
 npm run dev
 
-# build for production with minification
+# export the directive as a library
 npm run build
 ```
