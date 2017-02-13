@@ -7,6 +7,7 @@
   "main": "dist/vue-qart.js",
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --open --inline --hot",
+    "demo": "cross-env NODE_ENV=product webpack --progress",
     "build": "cross-env NODE_ENV=production webpack --config webpack.config.build.js --progress --hide-modules"
   },
   "dependencies": {

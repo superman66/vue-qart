@@ -37,7 +37,7 @@ data () {
 }
 ```
 
-For more details you should definitely check out[qart.js](https://github.com/kciter/qart.js) 
+For more details you should definitely check out [qart.js](https://github.com/kciter/qart.js) 
 
 ## Build Setup
 ``` bash
@@ -46,6 +46,9 @@ npm install
 
 # serve with hot reload at localhost:8080
 npm run dev
+
+# build demo 
+npm run demo
 
 # export the directive as a library
 npm run build
