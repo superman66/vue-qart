@@ -1,29 +1,31 @@
 # vue-qart
 
-the Vue 2.x directive for [kciter's qart.js](https://github.com/kciter/qart.js)
+the Vue 2.x Component for [kciter's qart.js](https://github.com/kciter/qart.js)
 <br>
 <img src="demo/assets/qrcode.png"/>
 <br>
 Check the [DEMO](http://www.iamsuperman.cn/vue-qart/demo/)
 ## Installation
 **install with NPM**
-```
+```javascript
 npm install vue-qart --save
 ```
 **Import**
-```$xslt
+```javascript
 import VueQArt from 'vue-qart'
 
 new Vue({
-    directives: {VueQArt}
+    components: {VueQArt}
 })
 ```
 ## Usage
 **In template**
+
 ```html
-<div v-vue-q-art="config"></div>
+<vue-q-art :config="config"></vue-q-art>
 ```
 **Set config value**
+
 ```javascript
 data () {
     return {
@@ -39,8 +41,18 @@ data () {
 
 For more details you should definitely check out [qart.js](https://github.com/kciter/qart.js) 
 
+**download to image**
+
+you can download the qrcode to image by using `canvas.toDataURL()`
+```javascript
+const myCanvas = this.$refs.qart.children[0];
+const type = 'image/png';
+let image = myCanvas.toDataURL(type).replace(type, "image/octet-stream");
+window.location.href = image; // it will save locally
+```
+
 ## Build Setup
-``` bash
+```bash
 # install dependencies
 npm install
 

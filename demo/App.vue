@@ -2,28 +2,30 @@
     <div id="app">
         <img src="logo.png">
         <h1>{{ msg }}</h1>
-        <div v-vue-q-art="config"></div>
+        <!--<div v-vue-q-art="config"></div>-->
+        <vue-q-art :config="config"></vue-q-art>
     </div>
 </template>
 
 <script>
-    import VueQArt from '../dist/vue-qart'
-    export default {
-        directives: {
-            VueQArt
+  import VueQArt from '../src/vue-qart.vue'
+  import QArt from 'qartjs'
+  export default {
+    components: {
+      VueQArt
+    },
+    name: 'app',
+    data () {
+      return {
+        msg: 'the Vue 2.x directive for QArt.js',
+        config: {
+          value: 'https://www.baidu.com',
+          imagePath: './assets/logo.png',
+          filter: 'color'
         },
-        name: 'app',
-        data () {
-            return {
-                msg: 'the Vue 2.x directive for QArt.js',
-                config: {
-                    value: 'https://www.baidu.com',
-                    imagePath: './assets/logo.png',
-                    filter: 'color'
-                },
-            }
-        }
-    }
+      }
+    },
+  }
 </script>
 
 <style>
