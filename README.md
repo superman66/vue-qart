@@ -56,7 +56,7 @@ window.location.href = image; // it will save locally
 # install dependencies
 npm install
 
-# serve with hot reload at localhost:8080
+# serve with hot reload at localhost:8080/demo/
 npm run dev
 
 # build demo 
