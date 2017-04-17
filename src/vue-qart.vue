@@ -5,7 +5,9 @@
     </div>
 </template>
 
+
 <script type="application/ecmascript">
+import QArt from 'qartjs';
   export default {
     props: ['config'],
     name: 'VueQart',
