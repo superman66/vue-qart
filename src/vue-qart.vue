@@ -1,7 +1,7 @@
 <template>
     <div>
         <div ref="qart"></div>
-        <button @click="convertToImage">download to image</button>
+        <button @click="convertToImage" v-if="downloadButton">download t2o image</button>
     </div>
 </template>
 
@@ -9,19 +9,16 @@
 <script type="application/ecmascript">
 import QArt from 'qartjs';
   export default {
-    props: ['config'],
+    props: ['config', 'downloadButton'],
     name: 'VueQart',
+  
     data () {
       return {
-        msg: ''
+        msg: '',
       }
     },
     mounted(){
-      new QArt({
-        value: this.config.value,
-        imagePath: this.config.imagePath,
-        filter: this.config.filter
-      }).make(this.$refs.qart);
+      new QArt(this.config).make(this.$refs.qart);
     },
 
     methods: {
