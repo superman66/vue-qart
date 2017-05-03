@@ -22,7 +22,7 @@ new Vue({
 **In template**
 
 ```html
-<vue-q-art :config="config"></vue-q-art>
+<vue-q-art :config="config" :downloadButton="downloadButton"></vue-q-art>
 ```
 **Set config value**
 
@@ -35,10 +35,11 @@ data () {
             imagePath: './examples/assets/logo.png',
             filter: 'color'
         },
+        downloadButton: false
     }
 }
 ```
-
+* `downloadButton` whether display donwload button.
 For more details you should definitely check out [qart.js](https://github.com/kciter/qart.js) 
 
 **download to image**
