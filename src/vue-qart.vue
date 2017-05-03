@@ -18,9 +18,8 @@ import QArt from 'qartjs';
       }
     },
     mounted(){
-      new QArt(this.config).make(this.$refs.qart);
+     this.qart =  new QArt(this.config).make(this.$refs.qart);
     },
-
     methods: {
       convertToImage(){
         const myCanvas = this.$refs.qart.children[0];

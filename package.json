@@ -1,7 +1,7 @@
 {
   "name": "vue-qart",
   "description": "the Vue 2.x component of QArt.js",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "author": "supermanchc@gmail.com",
   "repository": "https://github.com/superman66/vue-qart",
   "main": "dist/vue-qart.js",
@@ -11,7 +11,7 @@
     "build": "cross-env NODE_ENV=production webpack --config webpack.config.build.js --progress --hide-modules"
   },
   "dependencies": {
-    "qartjs": "^1.0.2",
+    "qartjs": "^1.1.1",
     "vue": "^2.1.0"
   },
   "devDependencies": {

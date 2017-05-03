@@ -3,13 +3,12 @@
         <img src="logo.png">
         <h1>{{ msg }}</h1>
         <!--<div v-vue-q-art="config"></div>-->
-        <vue-q-art :config="config"></vue-q-art>
+        <vue-q-art :config="config" :downloadButton="downloadButton"></vue-q-art>
     </div>
 </template>
 
 <script>
   import VueQArt from '../src/vue-qart.vue'
-  import QArt from 'qartjs'
   export default {
     components: {
       VueQArt
@@ -21,9 +20,16 @@
         config: {
           value: 'https://www.baidu.com',
           imagePath: './assets/logo.png',
-          filter: 'color'
+          filter: 'color',
+          size: 500
         },
+        downloadButton: false
       }
+    },
+    watch: {
+      value: function (val, oldVal) {
+        console.log('new: %s, old: %s', val, oldVal)
+      },
     },
   }
 </script>
