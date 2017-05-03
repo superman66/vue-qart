@@ -4,6 +4,7 @@
         <h1>{{ msg }}</h1>
         <!--<div v-vue-q-art="config"></div>-->
         <vue-q-art :config="config" :downloadButton="downloadButton"></vue-q-art>
+        change qrcode url: <input type="text" v-model="config.value">
     </div>
 </template>
 
@@ -25,12 +26,7 @@
         },
         downloadButton: false
       }
-    },
-    watch: {
-      value: function (val, oldVal) {
-        console.log('new: %s, old: %s', val, oldVal)
-      },
-    },
+    }
   }
 </script>
 

@@ -17,10 +17,22 @@ import QArt from 'qartjs';
         msg: '',
       }
     },
-    mounted(){
-     this.qart =  new QArt(this.config).make(this.$refs.qart);
+    watch: {
+      'config.value': function (val, oldVal) {
+        this.config.vaule = val;
+        this.renderQrcode(this.config);
+      console.log('new: %s, old: %s', val, oldVal)
+      },
     },
+    mounted(){
+      this.renderQrcode(this.config)
+    },
+    
     methods: {
+      renderQrcode(config){
+        this.qart =  new QArt(config);
+        this.qart.make(this.$refs.qart)
+      },
       convertToImage(){
         const myCanvas = this.$refs.qart.children[0];
         const type = 'image/png';
