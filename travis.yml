@@ -1,6 +1,5 @@
 languages: node_js
 node_js: 
   - "iojs"
-  - '"6"
-
-  script: npm run demo
+  - "6"
+script: npm run demo
