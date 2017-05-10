@@ -1,14 +1,14 @@
 {
   "name": "vue-qart",
   "description": "the Vue 2.x component of QArt.js",
-  "version": "2.0.4",
+  "version": "2.0.6",
   "author": "supermanchc@gmail.com",
   "repository": "https://github.com/superman66/vue-qart",
   "main": "dist/vue-qart.js",
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --open --inline --hot",
     "demo": "cross-env NODE_ENV=product webpack --progress",
-    "build": "cross-env NODE_ENV=production webpack --config webpack.config.build.js --progress --hide-modules"
+    "build": "rm -rf dist/ && cross-env NODE_ENV=production webpack --config webpack.config.build.js --progress --hide-modules"
   },
   "dependencies": {
     "qartjs": "^1.1.1",
