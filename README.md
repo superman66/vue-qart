@@ -1,4 +1,4 @@
-[![Travis](https://img.shields.io/travis/superman66/vue-qart.svg?style=plastic)](https://travis-ci.org/superman66/vue-qart) [![npm](https://img.shields.io/npm/v/vue-qart.svg?style=plastic)](https://www.npmjs.com/package/vue-qart)
+[![Travis](https://img.shields.io/travis/superman66/vue-qart.svg?style=plastic)](https://travis-ci.org/superman66/vue-qart) [![npm](https://img.shields.io/npm/v/vue-qart.svg?style=plastic)](https://www.npmjs.com/package/vue-qart) [![npm](https://img.shields.io/npm/dt/vue-qart.svg?style=plastic)](https://www.npmjs.com/package/vue-qart)
 # vue-qart
 
 the Vue 2.x Component for [kciter's qart.js](https://github.com/kciter/qart.js)
