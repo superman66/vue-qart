@@ -7,12 +7,10 @@ cache:
   - node_modules
 script: 
   - npm run demo
-  - npm run build
-deploy:
-  provider: npm
-  email: supermanchc@gmail.com
-  on:
-    tags: true
-    branch: master
-dd:
-  secure: Nqb0fvn53y3wbz93Y9G4XxYIQyZmpI88CN4hMfIkIX7JcvFxA0Tr13DLAwaUuUo3ibPczcm2dvlRN4blE1axO14jDz3s5SJGzb1zuhPrqZSAtsN2aDrebQIC5Ttgd/fsq7xsw9D31BObvEZvLPgdrayokfeNNBMvi1cxDPLywNWNK9kRXqTQTb++bnObG6UBQQnXqBzyUcl1nH0MR4zKwZU8YrpnryOaq2ke2VWhs6cv+l9kP3Gl6XzaCDWOawtIye/y8DAVoPYU47ZnxFGm7zmcWv81RQU/UlrN5+inxpCWkNxpvuQRkUuQSxAUD1TGbE/JGMfDhAvyFddlMUbIfDFVV8iV1lXESKCn+QqQRNJMzNQd3Fnw7VOVS3kJ0P0deE6wTZvx5H/Lu99aWvNxx5yiJSaM2goXA40cyCsEOwD5y7k4G9e6JbfvvZk0w5YBlRVG+mVO/CcZTNhOfG8riA/VzQhXmVppx/axG//+sTEDhp1j0FVe/gqaFfXachDJz7jeNPizoHLVIjJgYMdC2QzmvG+6S5r6e5GIlZju2YVrDZYpshCdfWUNm/t9pt5NryHBNM6nfalHnGBEqNiq1I9JQ5we9jeaVaMprR1zw6qpeZHp+uc4X/UAGPCyoDJwDFJhyFb9EGAXLp0NTqGxkaR2uowX3uD8H+FAm0E6itA=
+  # - npm run build
+# deploy:
+#   provider: npm
+#   email: supermanchc@gmail.com
+#   on:
+#     tags: true
+#     branch: master
