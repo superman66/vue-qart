@@ -7,10 +7,11 @@ cache:
   - node_modules
 script: 
   - npm run demo
-  # - npm run build
-# deploy:
-#   provider: npm
-#   email: supermanchc@gmail.com
-#   on:
-#     tags: true
-#     branch: master
+  - npm run build
+deploy:
+  provider: npm
+  email: supermanchc@gmail.com
+  api_key: $NPM_TOKEN
+  on:
+    tags: true
+    branch: master
