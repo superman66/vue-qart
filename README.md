@@ -9,7 +9,7 @@ the Vue 2.x Component for [kciter's qart.js](https://github.com/kciter/qart.js)
 <br>
 <img src="demo/assets/qrcode.png"/>
 <br>
-Check the [DEMO](http://www.iamsuperman.cn/vue-qart/demo/)
+Check the [DEMO](http://superman66.github.io/vue-qart/demo/)
 ## Installation
 **install with NPM**
 ```javascript
