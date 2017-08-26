@@ -19,7 +19,7 @@ import QArt from 'qartjs';
     },
     watch: {
       'config.value': function (val, oldVal) {
-        this.config.vaule = val;
+        this.config.value = val;
         this.renderQrcode(this.config);
       console.log('new: %s, old: %s', val, oldVal)
       },
