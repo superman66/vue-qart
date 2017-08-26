@@ -1,11 +1,15 @@
 [![Travis](https://img.shields.io/travis/superman66/vue-qart.svg?style=plastic)](https://travis-ci.org/superman66/vue-qart) [![npm](https://img.shields.io/npm/v/vue-qart.svg?style=plastic)](https://www.npmjs.com/package/vue-qart) [![npm](https://img.shields.io/npm/dt/vue-qart.svg?style=plastic)](https://www.npmjs.com/package/vue-qart)
 # vue-qart
+##  You should read it before you using vue-qart
+>because of qart.js's author doesn't publish the lastest version to npm. so, the new options `size`, `version`,`background`,`fillType` doesn't work in vue-qart until qart.js' author publish the lastest version.
+
+>For More Detail, seeing this issue: [size option doesn't works](https://github.com/kciter/qart.js/issues/20)
 
 the Vue 2.x Component for [kciter's qart.js](https://github.com/kciter/qart.js)
 <br>
 <img src="demo/assets/qrcode.png"/>
 <br>
-Check the [DEMO](http://www.iamsuperman.cn/vue-qart/demo/)
+Check the [DEMO](http://chenhuichao.com/vue-qart/demo/)
 ## Installation
 **install with NPM**
 ```javascript
