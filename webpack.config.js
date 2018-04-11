@@ -1,13 +1,16 @@
 var path = require('path')
-var webpack = require('webpack')
-var merge = require('webpack-merge')
 
 module.exports = {
-    entry: './demo/main.js',
+    entry: path.resolve(__dirname, 'demo/index'),
+    devServer: {
+      hot: true,
+      contentBase: path.resolve(__dirname, 'demo'),
+      publicPath: '/'
+    },
     output: {
-        path: path.resolve(__dirname, './demo'),
-        publicPath: '/demo/',
-        filename: 'bundle.js'
+      path: path.resolve(__dirname, 'assets'),
+      filename: 'bundle.js',
+      publicPath: './',
     },
     module: {
         rules: [
@@ -16,13 +19,9 @@ module.exports = {
                 loader: 'vue-loader',
                 options: {
                     loaders: {
-                        // Since sass-loader (weirdly) has SCSS as its default parse mode, we map
-                        // the "scss" and "sass" values for the lang attribute to the right configs here.
-                        // other preprocessors should work out of the box, no loader config like this necessary.
                         'scss': 'vue-style-loader!css-loader!sass-loader',
                         'sass': 'vue-style-loader!css-loader!sass-loader?indentedSyntax'
                     }
-                    // other vue-loader options go here
                 }
             },
             {
@@ -44,33 +43,8 @@ module.exports = {
             'vue$': 'vue/dist/vue.common.js'
         }
     },
-    devServer: {
-        historyApiFallback: true,
-        noInfo: true
-    },
     performance: {
         hints: false
     },
     devtool: '#eval-source-map'
-}
-
-
-if (process.env.NODE_ENV === 'production') {
-    // http://vue-loader.vuejs.org/en/workflow/production.html
-    module.exports.plugins = (module.exports.plugins || []).concat([
-        new webpack.DefinePlugin({
-            'process.env': {
-                NODE_ENV: '"production"'
-            }
-        }),
-        new webpack.optimize.UglifyJsPlugin({
-            sourceMap: false,
-            compress: {
-                warnings: false
-            }
-        }),
-        new webpack.LoaderOptionsPlugin({
-            minimize: true
-        })
-    ])
 }
