@@ -1,6 +1,6 @@
 <template>
     <div id="app">
-        <img src="logo.png">
+        <img src="./logo.png">
         <h1>{{ msg }}</h1>
         <!--<div v-vue-q-art="config"></div>-->
         <vue-q-art :config="config" ></vue-q-art>
@@ -21,7 +21,7 @@ export default {
       msg: "the Vue 2.x directive for QArt.js",
       config: {
         value: "https://www.baidu.com",
-        imagePath: "./assets/logo.png",
+        imagePath: "./logo.png",
         filter: "color",
         size: 500
       },

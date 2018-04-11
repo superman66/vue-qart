@@ -7,7 +7,7 @@
   "main": "dist/vue-qart.js",
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --open --inline --hot",
-    "prepages": "cross-env NODE_ENV=product webpack --progress",
+    "prepages": "cross-env NODE_ENV=production webpack --progress",
     "pages": "node demo/gh-pages.js",
     "prerelease": "rm -rf dist/ && cross-env NODE_ENV=production webpack --config webpack.config.build.js --progress --hide-modules",
     "release": "nrm use npm && npm publish"
@@ -35,6 +35,7 @@
     "vue-template-compiler": "^2.1.0",
     "webpack": "^2.2.0",
     "webpack-dev-server": "^2.2.0",
+    "html-webpack-plugin": "^2.30.1",
     "webpack-merge": "^2.6.1"
   },
   "config": {
