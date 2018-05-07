@@ -43,8 +43,10 @@ data () {
     }
 }
 ```
+**for imagePath prop, you can use base64 instead of image path.**
 
 For more details you should definitely check out [qart.js](https://github.com/kciter/qart.js) 
+
 
 **download to image**
 
