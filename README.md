@@ -38,7 +38,8 @@ data () {
         config: {
             value: 'https://www.baidu.com',
             imagePath: './examples/assets/logo.png',
-            filter: 'color'
+            filter: 'color',
+            size: 195
         }
     }
 }

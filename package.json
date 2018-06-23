@@ -13,7 +13,7 @@
     "release": "nrm use npm && npm publish"
   },
   "dependencies": {
-    "qartjs": "1.1.1"
+    "qartjs": "1.1.2"
   },
   "peerDependencies": {
     "vue": "^2.5.0"
