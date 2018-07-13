@@ -54,6 +54,8 @@ passing `download` props, to show download button, it support:
 - text - button text
 - visible - setting download button visible or not
 - style - setting download button style
+- type - image type,such as `image/png`
+- filename
 
 
 you can download the qrcode to image by using `canvas.toDataURL()`
