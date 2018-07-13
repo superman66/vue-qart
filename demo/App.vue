@@ -10,36 +10,36 @@
 </template>
 
 <script>
-import VueQArt from "../src/vue-qart.vue";
+import VueQArt from '../src/vue-qart.vue'
 export default {
   components: {
-    VueQArt
+    VueQArt,
   },
-  name: "app",
+  name: 'app',
   data() {
     return {
-      msg: "the Vue 2.x directive for QArt.js",
+      msg: 'the Vue 2.x directive for QArt.js',
       config: {
-        value: "https://www.baidu.com",
-        imagePath: "./logo.png",
-        filter: "color",
-        size: 500
+        value: 'https://www.baidu.com',
+        imagePath: './logo.png',
+        filter: 'color',
+        size: 500,
       },
       download: {
         visible: true,
-        text: "下载",
+        text: '下载',
         style: {
-          fontSize: "16px"
-        }
-      }
-    };
-  }
-};
+          fontSize: '16px',
+        },
+      },
+    }
+  },
+}
 </script>
 
 <style>
 #app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;

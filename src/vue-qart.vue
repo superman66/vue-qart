@@ -1,13 +1,13 @@
 <template>
     <div>
         <div ref="qart"></div>
-        <button @click="convertToImage" v-if="download.visible" v-bind:style="download.style">{{download.text}}</button>
+        <a @click="convertToImage" v-if="download.visible" v-bind:style="download.style">{{download.text}}</a>
     </div>
 </template>
 
 
 <script type="application/ecmascript">
-import QArt from "qartjs";
+import QArt from 'qartjs'
 export default {
   props: {
     config: {
@@ -15,45 +15,41 @@ export default {
     },
     download: {
       type: Object,
-      default: function(){
+      default: function() {
         return {
           visible: false,
-          text: '下载为图片',
-          style: {}
         }
-      }
-    }
+      },
+    },
   },
-  name: "VueQart",
+  name: 'VueQart',
 
   data() {
-    return {
-      msg: ""
-    };
+    return {}
   },
   watch: {
-    "config.value": function(val, oldVal) {
-      this.config.value = val;
-      this.renderQrcode(this.config);
-    }
+    'config.value': function(val, oldVal) {
+      this.config.value = val
+      this.renderQrcode(this.config)
+    },
   },
   mounted() {
-    this.renderQrcode(this.config);
+    this.renderQrcode(this.config)
   },
 
   methods: {
     renderQrcode(config) {
-      this.qart = new QArt(config);
-      this.qart.make(this.$refs.qart);
+      this.qart = new QArt(config)
+      this.qart.make(this.$refs.qart)
       // this.$refs.qart.appendChild(this.qart.make())
     },
-    convertToImage() {
+    convertToImage(e) {
+      const { type = 'image/png', filename = 'download.png' } = this.download
       const myCanvas = this.$refs.qart.children[0];
-      const type = "image/png";
-      let image = myCanvas.toDataURL(type).replace(type, "image/octet-stream");
-      window.location.href = image; // it will save locally
-    }
-  }
-};
+      e.target.href = myCanvas.toDataURL(type)
+      e.target.download = filename
+    },
+  },
+}
 </script>
 
