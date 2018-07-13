@@ -1,17 +1,24 @@
+sudo: false
+
 language: node_js
 node_js:
-- '6'
+  - 8.5.0
+
+env:
+  - BROWSER=ChromeCi
+  - BROWSER=Firefox
 cache:
-  bundler: true
   directories:
-  - node_modules
-script: 
-  - npm run demo
+  - node_modules # NPM packages
+
+script:
   - npm run build
+
 deploy:
   provider: npm
   email: supermanchc@gmail.com
   api_key: $NPM_TOKEN
+  skip-cleanup: true
   on:
     tags: true
-    branch: master
+

@@ -9,7 +9,7 @@
     "dev": "cross-env NODE_ENV=development webpack-dev-server --open --inline --hot",
     "prepages": "cross-env NODE_ENV=production webpack --progress",
     "pages": "node demo/gh-pages.js",
-    "prerelease": "rm -rf dist/ && cross-env NODE_ENV=production webpack --config webpack.config.build.js --progress --hide-modules",
+    "build": "rm -rf dist/ && cross-env NODE_ENV=production webpack --config webpack.config.build.js --progress --hide-modules",
     "release": "nrm use npm && npm publish"
   },
   "dependencies": {
