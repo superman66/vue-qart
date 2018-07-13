@@ -6,7 +6,6 @@ node_js:
 
 env:
   - BROWSER=ChromeCi
-  - BROWSER=Firefox
 cache:
   directories:
   - node_modules # NPM packages
